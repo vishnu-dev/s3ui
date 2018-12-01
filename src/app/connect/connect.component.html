@@ -1,0 +1,65 @@
+<div class="container h-100">
+  <div class="row h-100 justify-content-center align-items-center">
+    <div class="col-md-6 justify-content-center">
+      <mdb-card bgColor="black" class="white-text">
+        <div class="view overlay p-3">
+          <img class="mx-auto" src="../../assets/logo_200x100.png" height="102" width="205"/>
+          <a href="#!">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+        <!--<mdb-card-img>-->
+        <!--</mdb-card-img>-->
+        <mdb-card-title class="text-center p-2 color-2 black-text">
+          <span style="font-size: x-large; ">Create a Connection</span>
+        </mdb-card-title>
+        <mdb-card-body>
+          <div class="text-center">
+            <button mdbBtn mdbWavesEffect gradient="peach" [rounded]="true" class="black-text" (click)="readConfig()">
+              Auto Detect
+            </button>
+          </div>
+          <div class="p-4">
+            <form>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text md-addon text-white bg-dark" id="material-addon1">Name</span>
+              </div>
+              <input #name type="text" class="form-control color-2" placeholder="Name" aria-label="Name"
+                     value="{{user.name}}"
+                     aria-describedby="material-addon1">
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text md-addon text-white bg-dark" id="material-addon2">
+                  ID
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+              </div>
+              <input #id type="password" class="form-control color-2" placeholder="Access ID" aria-label="Name" value="{{user.id}}"
+                     aria-describedby="material-addon2" name="id">
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text md-addon text-white bg-dark" id="material-addon3">
+                  KEY
+                  &nbsp;
+                </span>
+              </div>
+              <input #key type="password" class="form-control color-2" placeholder="Access Key" aria-label="Name" value="{{user.key}}"
+              aria-describedby="material-addon3" name="key">
+            </div>
+            <button mdbBtn color="primary" mdbWavesEffect (click)="postConfig(name.value, id.value, key.value)" routerLink="/buckets"> Connect</button>
+          </form>
+          </div>
+        </mdb-card-body>
+      </mdb-card>
+      <div *ngIf="!config_status" #alert class="alert alert-warning alert-dismissible fade show" role="alert">
+        <button type="button" class="close" aria-label="Close" (click)="closeAlert()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <strong>Couldn't auto-detect the config.</strong> Please enter manually.
+      </div>
+    </div>
+  </div>
+</div>

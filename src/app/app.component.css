@@ -1,0 +1,11 @@
+.mat-sidenav-container {
+  height: 100%;
+}
+h1 {
+  color: coral;
+}
+
+.brand {
+  font-family: 'Google Sans', Arial, serif;
+  font-size: large;
+}

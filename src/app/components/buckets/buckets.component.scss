@@ -1,0 +1,35 @@
+td {
+  background: black;
+  color: white;
+}
+::ng-deep .dataTables_info{
+  color: white!important;
+}
+::ng-deep .dataTables_paginate {
+  color: white!important;
+}
+::ng-deep .dataTables_filter {
+  color: white!important;
+}
+::ng-deep .dataTables_length {
+  color: white!important;
+}
+::ng-deep .paginate_button{
+  background: linear-gradient(40deg,#2096ff,#05ffa3);
+  border: none;
+  color: black;
+  border-radius: 10px;
+  padding: 7px 15px;
+  margin: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+ #main-table td {
+   font-size: medium;
+   font-weight: 500;
+ }
+#main-table td:hover {
+  color: #0acffe;
+}

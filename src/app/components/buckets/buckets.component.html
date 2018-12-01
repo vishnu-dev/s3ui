@@ -1,0 +1,26 @@
+<div class="container white-text">
+  <div class="row">
+    <div class="col-12">
+      <img class="mx-auto d-block" src="../../assets/logo_200x100.png" height="51" width="102"/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12" id="main-table">
+      <!--<button mdbBtn mdbWavesEffect gradient="peach" class="mx-auto d-block" (click)="showBuckets()">Get buckets!</button>-->
+      <!--<p *ngFor="bucket in buckets">{{bucket.Name}}</p>-->
+      <table datatable class="table amy-crisp-gradient hover table-striped black-text hover" [dtOptions]="dtOptions" [dtTrigger]="dtTrigger">
+        <thead>
+          <tr>
+            <th *ngFor="let head of headElements">{{head}}</th>
+          </tr>
+        </thead>
+        <tbody class="black-text">
+          <tr *ngFor="let bucket of buckets" class="bg-light">
+            <td>{{bucket.Name}}</td>
+            <td>{{bucket.CreationDate}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

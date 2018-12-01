@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+html, body {
+  margin: 0;
+  height: 100% !important;
+  background: #222222;
+}
+.color-1 {
+  background: #474747;
+  color: white;
+}
+.color-1:focus {
+  color: black;
+}
+.color-2 {
+  background: #707070;
+  color: white;
+}
+.color-2:focus {
+  color: black;
+}
+* {
+  //font-family: 'Product Sans', Arial, serif !important;
+  border: none!important;
+}
